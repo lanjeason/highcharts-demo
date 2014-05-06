@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>我的C8</title>
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script src="/static/js/head.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        FileCache.require(["/static/js/global.js","/static/js/common.js", "/static/css/global.css","/static/css/font-awesome.min.css","/static/js/myc8.js"]);
+        </script>
+    </head>
+    <body>
+        <div id="myc8div">
+        <script src="/static/js/highcharts.js"></script>
+        <div class="breadcrumbs" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="icon-home home-icon"></i>
+                    <a href="#">首页</a>
+                </li>
+                <li class="active">我的C8</li>
+            </ul>
+        </div>
+        <div class="clearfix myC8box">
+            <div class="fl">
+                <div class="title"><i class="fa fa-moon-o"></i>&nbsp;本月销售统计</div>
+                <div id="sale_by_month"></div>  
+            </div><!-- 本月销售统计 -->
+            <div class="fl">
+                <div class="title" style="width:520px"><i class="fa fa-certificate"></i>&nbsp;本日销售统计<div class="newUser"><i class="fa fa-users"></i>&nbsp;本日新增会员:&nbsp;&nbsp;<span id="newUserNo"></span></div></div>
+                <div id="sale_by_day1" class='fl'></div>
+                <div id="sale_by_day2" class="fl"></div>                
+            </div><!-- 本日销售统计 -->
+        </div>
+        <div class="clearfix myC8box" style="margin-top:20px;">
+            <div class="fl">
+                <div class="title" style="margin-top:-15px"><i class="fa fa-sort-amount-desc"></i>&nbsp;主要客户应收</div>
+                <div id="top_receivable">
+                    <table width="552px" style="margin-left:18px;margin-top:-10px;">
+                        <thead id="receivableTableHead">
+                            <tr>
+                                <th width="40%">客户名称</th>
+                                <th width="20%">实际应收</th>
+                                <th width="20%">本月新增</th>
+                                <th width="20%">本月回款</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <table width="552px" style="margin-left:18px;">
+                        <tbody id="receivableTable">
+                   
+                        </tbody>
+                    </table>
+                </div>
+            </div><!-- 主要客户应收 -->
+            <div class="fl">
+                <div class="title" style="margin-top:-15px;width:520px"><i class="fa fa-pencil-square-o"></i>&nbsp;财务收支分析</div>
+                <div class="fl">
+                    <div id="income"></div>
+                    <div id="expense"></div>
+                </div>
+                <div class="fl titleBox">
+                    <div class="incomeTitle">
+                        <div class="titleName">收入金额&nbsp;&nbsp;</div>
+                        <div class="money"><span id="incomeAmount"></span><a>&nbsp;元</a></div>
+                    </div>
+                    <div class="expenseTitle">
+                        <div class="titleName">费用支出&nbsp;&nbsp;</div>
+                        <div class="money"><span id="expenseAmount"></span><a>&nbsp;元</a></div>
+                    </div>
+                    <div class="totalTitle">
+                        <div class="titleName">合&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;计&nbsp;&nbsp;</div>
+                        <div class="money"><span id="totalAmount"></span><a>&nbsp;元</a></div>
+                    </div>
+                </div>
+            </div><!-- 财务收支分析 -->
+        </div>
+        </div>
+    </body>
+</html>
