@@ -423,8 +423,32 @@ function topReceivable(){
             var added = data[i].added;
             var amount = data[i].amount;
             var topDOM = "<tr><td width='40%'>" + partnerName + "</td><td width='20%' class='fontfr'>" + actual_receivable + "&nbsp元</td><td width='20%' class='fontfr'>" + added + "&nbsp元</td><td width='20%' class='fontfr'>" + amount + "&nbsp元</td></tr>";
-            document.getElementById("receivableTable").innerHTML = document.getElementById("receivableTable").innerHTML+topDOM;            
+            // var oTable=document.getElementById("receivableTable"); 
+            // setTableInnerHTML(oTable,topDOM);
+            $("#receivableTable").append(topDOM);  
         };
+        // if(navigator && navigator.userAgent.match(/msie/i)){ 
+        //     var temp = table.ownerDocument.createElement('div'); 
+        //     temp.innerHTML = '<table><tbody>' + topDOM + '</tbody></table>'; 
+        //     if(table.tBodies.length == 0){ 
+        //         var tbody=document.createElement("tbody"); 
+        //         table.appendChild(tbody); 
+        //     } 
+        //     table.replaceChild(temp.firstChild.firstChild, table.tBodies[0]); 
+        // };
+        // function setTableInnerHTML(table, topDOM) { 
+        //     if(navigator && navigator.userAgent.match(/msie/i)){ 
+        //         var temp = table.ownerDocument.createElement('div'); 
+        //         temp.innerHTML = '<table><tbody>' + topDOM + '</tbody></table>'; 
+        //         if(table.tBodies.length == 0){ 
+        //             var tbody=document.createElement("tbody"); 
+        //             table.appendChild(tbody); 
+        //         } 
+        //         table.replaceChild(temp.firstChild.firstChild, table.tBodies[0]); 
+        //     } else { 
+        //         table.innerHTML = table.innerHTML + topDOM;
+        //     };
+        // };
     })
     .fail(function() {
         alert("主要客户应收数据获取失败！");
